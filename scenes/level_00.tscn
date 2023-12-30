@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3 uid="uid://dhpblyiskxemx"]
+
+[ext_resource type="PackedScene" uid="uid://dijj6klyb2jer" path="res://scenes/SceneManager.tscn" id="1_lp57r"]
+[ext_resource type="PackedScene" uid="uid://cew3wajvdu8f5" path="res://scenes/player.tscn" id="2_63k0x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdpgd"]
+size = Vector2(96, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nifw1"]
+size = Vector2(96, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ax4b"]
+size = Vector2(224, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8cmb"]
+size = Vector2(96, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cm6bp"]
+size = Vector2(96, 32)
+
+[node name="Level00" type="Node2D"]
+
+[node name="SceneManager" parent="." instance=ExtResource("1_lp57r")]
+position = Vector2(76, -452)
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="Background"]
+color = Color(0.196078, 0.196078, 0.196078, 1)
+polygon = PackedVector2Array(-4, -28, -8, -240, 316, -308, 956, -276, 1348, -336, 1600, -332, 1996, -228, 1996, -16, 1672, -8, 1504, -108, 1504, -28, 1408, -28, 1408, -108, 1260, -20)
+
+[node name="Floor" type="Node2D" parent="."]
+
+[node name="Floor00" type="StaticBody2D" parent="Floor"]
+
+[node name="FloorPolygon" type="Polygon2D" parent="Floor/Floor00"]
+position = Vector2(16, -16)
+polygon = PackedVector2Array(-16, -16, 240, -16, 240, -48, 304, -48, 304, -80, 592, -80, 592, -48, 656, -48, 656, -16, 1200, -16, 1200, -48, 1264, -48, 1264, -80, 1328, -80, 1328, -112, 1392, -112, 1392, -80, 1232, 16, -48, 16, -48, -336, 2000, -336, 2000, 16, 1648, 16, 1488, -80, 1488, -112, 1552, -112, 1552, -80, 1616, -80, 1616, -48, 1680, -48, 1680, -16, 1968, -16, 1968, -208, 1744, -208, 1680, -208, 1680, -240, 1616, -240, 1616, -272, 1552, -272, 1552, -304, 1328, -304, 1328, -272, 1264, -272, 1264, -240, 1200, -240, 1200, -208, 1040, -208, 1040, -240, 816, -240, 816, -208, 656, -208, 656, -240, 592, -240, 592, -272, 304, -272, 304, -240, 240, -240, 240, -208, -16, -208)
+
+[node name="FloorCollision" type="CollisionPolygon2D" parent="Floor/Floor00"]
+polygon = PackedVector2Array(0, -32, 256, -32, 256, -64, 320, -64, 320, -96, 416, -96, 416, -64, 512, -64, 512, -96, 608, -96, 608, -64, 672, -64, 672, -32, 1216, -32, 1216, -64, 1280, -64, 1280, -96, 1344, -96, 1344, -128, 1408, -128, 1408, -96, 1408, 0, -32, 0, -32, -352, 2016, -352, 2016, 0, 1504, 0, 1504, -96, 1504, -128, 1568, -128, 1568, -96, 1632, -96, 1632, -64, 1696, -64, 1696, -32, 1984, -32, 1984, -224, 1696, -224, 1696, -256, 1632, -256, 1632, -288, 1568, -288, 1568, -320, 1344, -320, 1344, -288, 1280, -288, 1280, -256, 1216, -256, 1216, -224, 1056, -224, 1056, -256, 832, -256, 832, -224, 672, -224, 672, -256, 608, -256, 608, -288, 320, -288, 320, -256, 256, -256, 256, -224, 0, -224)
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="Platform00" type="StaticBody2D" parent="Platforms"]
+
+[node name="PlatformPolygon" type="Polygon2D" parent="Platforms/Platform00"]
+polygon = PackedVector2Array(896, -64, 992, -64, 992, -96, 896, -96)
+
+[node name="PlatformCollision" type="CollisionShape2D" parent="Platforms/Platform00"]
+position = Vector2(944, -80)
+shape = SubResource("RectangleShape2D_mdpgd")
+
+[node name="Lava" type="Node2D" parent="."]
+
+[node name="Lava00" type="StaticBody2D" parent="Lava"]
+
+[node name="LavaPolygon" type="Polygon2D" parent="Lava/Lava00"]
+color = Color(1, 0.501961, 0, 1)
+polygon = PackedVector2Array(416, -96, 512, -96, 512, -64, 416, -64)
+
+[node name="LavaCollision" type="CollisionShape2D" parent="Lava/Lava00"]
+position = Vector2(464, -80)
+shape = SubResource("RectangleShape2D_nifw1")
+
+[node name="Lava01" type="StaticBody2D" parent="Lava"]
+
+[node name="LavaPolygon" type="Polygon2D" parent="Lava/Lava01"]
+color = Color(1, 0.501961, 0, 1)
+polygon = PackedVector2Array(832, -32, 1056, -32, 1056, 0, 832, 0)
+
+[node name="LavaCollision" type="CollisionShape2D" parent="Lava/Lava01"]
+position = Vector2(944, -16)
+shape = SubResource("RectangleShape2D_8ax4b")
+
+[node name="Lava02" type="StaticBody2D" parent="Lava"]
+position = Vector2(492, 0)
+
+[node name="LavaPolygon" type="Polygon2D" parent="Lava/Lava02"]
+color = Color(1, 0.501961, 0, 1)
+polygon = PackedVector2Array(916, -32, 1012, -32, 1012, 0, 916, 0)
+
+[node name="LavaCollision" type="CollisionShape2D" parent="Lava/Lava02"]
+position = Vector2(964, -16)
+shape = SubResource("RectangleShape2D_e8cmb")
+
+[node name="Goal" type="Node2D" parent="."]
+
+[node name="Goal00" type="StaticBody2D" parent="Goal"]
+
+[node name="GoalPolygon" type="Polygon2D" parent="Goal/Goal00"]
+color = Color(0, 0.792157, 1, 1)
+polygon = PackedVector2Array(1792, -32, 1888, -32, 1888, 0, 1792, 0)
+
+[node name="GoalCollision" type="CollisionShape2D" parent="Goal/Goal00"]
+position = Vector2(1840, -16)
+shape = SubResource("RectangleShape2D_cm6bp")
+
+[node name="Player" parent="." instance=ExtResource("2_63k0x")]
+position = Vector2(80, -80)
