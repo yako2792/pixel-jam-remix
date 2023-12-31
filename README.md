@@ -22,8 +22,11 @@ Welcome to Pixel Jam Remix, a challenging 2D platformer game with a captivating 
 - **Retrowave Aesthetic:** Immerse yourself in a visually stunning retrowave world with vibrant neon colors and nostalgic vibes.
 - **In-Game Store:** Explore and purchase items in the in-game store to enhance your gaming experience.
 - **Player Customization:** Personalize your gaming experience with player customization options, including character appearance and abilities.
+- **Double Jump:** Master the art of the double jump to navigate through challenging obstacles with enhanced agility.
+- **Change World Gravity:** Strategically alter the world's gravity during levels, providing limited opportunities to overcome obstacles in unique ways.
 - **Polygonal Art:** Enjoy a visually striking game created entirely with polygons, adding a unique and modern touch.
 - **Challenging Yet Humorous Gameplay:** Experience a perfect blend of challenging obstacles and humorous elements that make gameplay both tough and enjoyable.
+
 
 ## Platforms
 
