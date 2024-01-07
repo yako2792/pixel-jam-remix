@@ -33,8 +33,8 @@ Welcome to Pixel Jam Remix, a challenging 2D platformer game with a captivating 
 
 Pixel Jam Remix is available on the following platforms:
 
-- [Play Store](#https://play.google.com/store/apps/dev?id=8213461123963897305)
-- [itch.io](#https://onetouchstd.itch.io/)
+- [Play Store](https://play.google.com/store/apps/dev?id=8213461123963897305)
+- [itch.io](https://onetouchstd.itch.io/)
 
 ## Controls
 
