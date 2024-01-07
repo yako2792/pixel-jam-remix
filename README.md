@@ -12,6 +12,7 @@ A challenging 2D platformer game with a retrowave aesthetic, featuring 50 levels
 - [Gameplay](#gameplay)
 - [Project Structure](#project-structure)
 - [Acknowledgments](#acknowledgments)
+- [Important Notes](#important-notes)
 
 ## Introduction
 
@@ -59,4 +60,8 @@ Explore the organization of Pixel Jam Remix's project files:
 
 - Character sprites are all polygons inside godot.
 - Sound effects produced using BandLab.
+
+## Important notes
+
+- Text and titles are adited in GIMP using Montserrat font, size 150.
 

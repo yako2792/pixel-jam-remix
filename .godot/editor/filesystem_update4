@@ -1,4 +1,8 @@
 res://scenes/level_00.tscn
 res://scenes/level_04.tscn
 res://scenes/player.tscn
+res://scenes/goal.tscn
 res://scenes/Player.gd
+res://scenes/SceneManager.gd
+res://scenes/level_00.gd
+res://scenes/level_04.gd

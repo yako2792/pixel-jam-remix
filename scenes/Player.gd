@@ -1,12 +1,21 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
 const JUMP_VELOCITY = -650.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@export var is_in_goal:bool = false:
+	get:
+		return is_in_goal
 
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var init_position
+var ray_cast
+
+func _ready():
+	init_position = position
+	is_in_goal = false
+	pass
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -25,9 +34,12 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	
 	move_and_slide()
 
 func _process(delta):
-	
+	if $GoalCollider.is_colliding():
+		is_in_goal = true
+	if $LavaCOllider.is_colliding():
+		position = init_position
 	pass

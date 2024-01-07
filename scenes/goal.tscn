@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dywjoyh2tj1gv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_knhlg"]
+size = Vector2(96, 32)
+
+[node name="Goal" type="Node2D"]
+
+[node name="Goal00" type="StaticBody2D" parent="."]
+position = Vector2(-1840, 16)
+collision_layer = 256
+collision_mask = 256
+
+[node name="GoalPolygon" type="Polygon2D" parent="Goal00"]
+color = Color(0, 0.792157, 1, 1)
+polygon = PackedVector2Array(1792, -32, 1888, -32, 1888, 0, 1792, 0)
+
+[node name="GoalCollision" type="CollisionShape2D" parent="Goal00"]
+position = Vector2(1840, -16)
+shape = SubResource("RectangleShape2D_knhlg")
