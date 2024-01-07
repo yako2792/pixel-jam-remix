@@ -19,24 +19,25 @@ position = Vector2(76, -452)
 [node name="White" type="Polygon2D" parent="Background"]
 polygon = PackedVector2Array(-256, 64, 1088, 64, 1312, 64, 1312, -320, -256, -320)
 
-[node name="Black" type="Polygon2D" parent="Background"]
-color = Color(0.196078, 0.196078, 0.196078, 1)
-polygon = PackedVector2Array(-4, -28, -4, -224, 160, -224, 1060, -224, 1060, -28)
+[node name="Grey" type="Polygon2D" parent="Background"]
+color = Color(0.215686, 0.215686, 0.215686, 1)
+polygon = PackedVector2Array(-4, -28, -4, -224, 160, -224, 384.008, -224, 384, -256, 1056, -256, 1056, -224, 1060, -224, 1060, -28)
 
 [node name="Floor" type="Node2D" parent="."]
 
 [node name="Floor00" type="StaticBody2D" parent="Floor"]
 
 [node name="FloorPolygon" type="Polygon2D" parent="Floor/Floor00"]
-polygon = PackedVector2Array(0, -32, 384, -32, 384, -64, 448, -64, 448, -96, 512, -96, 512, -64, 576, -64, 576, -32, 704, -32, 800, -32, 896, -32, 1056, -32, 1056, -224, 1088, -224, 1088, 0, 0, 0, -32, 0, -32, -224, 0, -224)
+polygon = PackedVector2Array(0, -32, 384, -32, 384, -64, 1056, -64, 1056, -224, 1088, -224, 1088, 0, 0, 0, -32, 0, -32, -224, 0, -224)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor/Floor00"]
-polygon = PackedVector2Array(-32, -160, 0, -160, 0, -32, 384, -32, 384, -64, 448, -64, 448, -96, 512, -96, 512, -64, 576, -64, 576, -32, 1056, -32, 1056, -160, 1088, -160, 1088, 0, -32, 0)
+polygon = PackedVector2Array(-32, -160, 0, -160, 0, -32, 384, -32, 384, -64, 1056, -64, 1056, -160, 1088, -160, 1088, 0, -32, 0)
 
 [node name="Lava" type="Node2D" parent="."]
+position = Vector2(-128, 0)
 
 [node name="Lava00" type="StaticBody2D" parent="Lava"]
-position = Vector2(288, 64)
+position = Vector2(288, 32)
 
 [node name="LavaPolygon" type="Polygon2D" parent="Lava/Lava00"]
 color = Color(1, 0.501961, 0, 1)
@@ -49,7 +50,7 @@ shape = SubResource("RectangleShape2D_m2f4s")
 [node name="Goal" type="Node2D" parent="."]
 
 [node name="Goal00" type="StaticBody2D" parent="Goal"]
-position = Vector2(-864, 0)
+position = Vector2(-864, -32)
 
 [node name="GoalPolygon" type="Polygon2D" parent="Goal/Goal00"]
 color = Color(0, 0.792157, 1, 1)
